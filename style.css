@@ -1,0 +1,50 @@
+:root{
+    --modra: #2BB8B8;
+    --svetle-seda: #2C2C28;
+    --tmave-seda: #1D1D1B;
+    --svetle-sedfda: #787878;
+    --text-sedy: #79808a;
+}
+body{
+    
+    background-color: var(--tmave-seda);
+    color: white;
+    font-size: 18px;
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
+}
+p, a, li {
+    font-weight: 300;
+}
+a{
+    transition: 0.3s ease;
+}
+a:hover{
+    text-decoration: underline;
+    color: var(--modra);
+}
+a:active{
+    text-decoration: underline;
+    color: var(--modra);
+}
+button{
+    transition: 0.3s ease;
+    border-radius: 8px;
+    padding: 5px 30px 5px 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.border-vlevo{
+    border-left: 5px solid var(--modra);
+    padding-left: 15px;
+}
+#list-technologie li {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+}
+
+#list-technologie li.show {
+  opacity: 1;
+  transform: translateY(0);
+}

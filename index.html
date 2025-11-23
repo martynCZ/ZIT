@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>ZIT - Martin Kozar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+</head>
+<body>
+    <img src="/images/Ellipse.png" class="absolute -top-100 right-0" width="1000" alt="" srcset="">
+    <header class="w-full sticky top-0 z-10">
+        <div class="flex justify-between items-center h-16 md:px-20 px-10 py-10">
+            <div class="flex items-center gap-2"> 
+                <img class="w-12" src="/images/logo.webp" alt="logo">  
+                <h1 class="text-xl font-bold">Martin Kozar</h1>
+            </div>
+            <div class="h-10 flex items-center px-20">
+            <nav>
+                <ul class="flex items-center gap-16 text-base text-[rgba(255,255,255,0.7)]">
+                    <li><a href="index.html">Úvodní stránka</a></li>
+                    <li><a href="/osobni-profil">Osobní profil</a></li>
+                    <li><a href="/projekty">Projekty</a></li>
+                </ul>
+            </nav>
+        </div>      
+            <button class="bg-[var(--modra)] hover:bg-white text-black">
+                Projekt ZIT
+            </button>
+        </div>
+    </header>
+    <!--ÚVOD-->
+    <div class="md:flex items-center block h-full 2xl:h-[70vh]">
+        <div class="flex flex-col md:py-26 py-20 md:px-20 px-10 w-[100%] xl:w-[52%]">
+            <div>
+                <div class="flex bg-[var(--svetle-seda)] w-42 text-center rounded-4xl justify-center items-center gap-2 px-4 py-1.5 mb-8">
+                    <div class="w-2 h-2 bg-[var(--modra)] rounded-4xl"></div>
+                    <p class="font-semibold color-white">Martin Kozar</p>
+                </div>
+                <h2 class="text-6xl font-bold border-vlevo">Projekt</h2>
+                <h2 class="text-5xl font-bold border-vlevo" id="nadpis"></h2>
+            </div>
+            <div class="my-8">
+                <p class="text-[var(--text-sedy)]">
+                    Jmenuji se Martin Kozar a toto je můj projekt do předmětu 
+                    Základy informačních technologií (ZIT). Webovým stránkám se 
+                    věnuji už dlouhodobě a naplno. Na této stránce se o mně můžete 
+                    dozvědět více informací.
+                </p>
+            </div>
+            <div class="md:flex gap-24">
+                <button class="bg-[var(--modra)] hover:bg-[var(--svetle-seda)] hover:text-white">
+                        <a href="/osobni-profil">Osobní profil</a>
+                </button>   
+                <button class="hover:bg-[var(--svetle-seda)] hover:text-white">
+                    <a href="/projekty">Projekty</a>
+                </button>   
+            </div>
+        </div>
+        <div class="mx-auto">
+            <img src="images/ilustrace.svg" width="500" alt="" srcset="">
+        </div>
+    </div>
+    <div class="md:flex md:py-26 py-20 md:px-20 px-10 justify-between bg-white text-black">
+       <div>
+            <h2 class="text-5xl font-bold border-vlevo mb-4">Využité technologie</h2>
+            <p>Projekt byl vytvořen pomocí:</p>
+            <div onclick="toggleTechnologie()" class="flex gap-2 cursor-pointer items-center hover:text-[var(--modra)]">
+                <div class="w-6 h-6 bg-[var(--tmave-seda)] flex items-center justify-center">
+                    <i class="fa-solid fa-plus text-2xl font-bold text-white"></i>
+                </div>
+                <p class="font-bold transition-opacity duration-2">Zobrazit:</p>
+            </div>
+            <ul id="list-technologie" class="marker:text-[var(--modra)] list-disc ml-0 pl-6">
+                <li>HTML5 - struktura</li>
+                <li>JavaScript - dynamické prvky</li>
+                <li>CSS - vzhled stránky</li>
+                <li>TailwindCSS - hlavní vzhled stránky</li>
+                <li>API - Pokémon (PokeAPI)</li>
+            </ul>
+       </div>
+       <!--POKÉMON-->
+       <div class="bg-[var(--modra)] p-4 text-black rounded-[10px] md:w-1/4 w-full border-6 border-[#a6a6a6]">
+            <div class="flex items-center justify-between font-bold">
+                <h4 id="pokeName"></h4>
+                <div class="flex items-baseline">
+                    <p class="text-[10px]">HP</p>
+                    <p id="pokeHP" class="text-3xl">60</p>
+                </div>
+            </div> 
+            <div class="w-full h-[30vh] bg-[url('images/pokemon-bg.jpg')] bg-cover bg-center flex justify-center items-center border-3 border-[#a6a6a6]">
+                <img id="pokeImg" alt="pokemon" class="p-2 max-h-full max-w-full object-contain">
+            </div> 
+            <div id="pokeInfo" class="text-center bg-[#a6a6a6] text-xs rounded-b-2xl">NO. <span id="pokeNum"></span> Pokémon HT:<span id="pokeHT"></span> WT:<span id="pokeWT"></span></div>
+            <div class="mt-8 flex justify-between">
+                <img src="images/pokemon-bg.jpg" width="30" alt="">
+                <p id="pokeAbility" class="font-bold">Pika strike</p>
+                <p id="pokeAbilityDmg" class="font-bold">50</p>
+            </div>
+            <p id="pokeAbilityInfo" class="text-justify text-sm leading-4"></p>
+         </div><button>tst</button>
+    </div>
+    <!--FOOTER-->
+    <div class="md:flex md:px-20 px-10 justify-between bg-[var(--tmave-seda)] py-10 border-b-1 border-b-[var(--svetle-seda)] text-center md:text-left ">
+       <div class="md:w-1/3 w-full mb-8 md:mb-0">
+            <h3 class="text-3xl font-bold mb-1 border-vlevo">Projekt</h3>
+            <p class="text-xl mb-2">Základy informačních technologií</p>
+            <img src="images/logo.webp" alt="logo" class="w-16 mx-auto md:mx-0">
+       </div>
+       <div class="md:w-1/3 w-full">
+            <h3 class="text-3xl font-bold mb-1 border-vlevo">Stránky</h3>
+            <p class="text-xl underline"><a href="">Úvodní stránka</a></p>
+            <p class="text-xl underline"><a href="">Osobní profil</a></p>
+            <p class="text-xl underline"><a href="">Projekty</a></p>
+       </div>
+    </div>
+    <footer class="py-4 text-center">
+        <p>© Copyright 2025 | Martin Kozar </p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
