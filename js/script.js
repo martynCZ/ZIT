@@ -101,3 +101,4 @@ const toggleTechnologie = () => {
     }
     isVisible = !isVisible;
 };
+

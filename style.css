@@ -73,3 +73,6 @@ button{
       left: 800px !important;
     }
 }
+#navMobil{
+    transition: 0.3s ease;
+}

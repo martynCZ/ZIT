@@ -7,7 +7,7 @@
     <title>ZIT - Projekty</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ab14a24fab.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <img src="/images/Ellipse.png" class="absolute -top-80 right-0 -z-1" width="700" alt="blue-gradient">
@@ -19,7 +19,7 @@
                     <h1 class="text-xl font-bold">Martin Kozar</h1>
                 </a>
             </div>
-            <div class="h-10 sm:flex items-center px-20 hidden">
+            <div class="h-10 md:flex items-center px-20 hidden">
             <nav>
                 <ul class="flex items-center gap-16 text-base text-[rgba(255,255,255,0.7)]">
                     <li><a href="/">Úvodní stránka</a></li>
@@ -27,10 +27,21 @@
                     <li><a href="/projekty">Projekty</a></li>
                 </ul>
             </nav>
-            </div>      
-            <button class="bg-[var(--modra)] hover:bg-white text-black hidden sm:block">
+            </div>             
+            <button class="bg-[var(--modra)] hover:bg-white text-black hidden md:block">
                 Projekt ZIT
-            </button>
+            </button>         
+            <nav id="navMobil" class="absolute text-[var(--tmave-seda)] w-full left-0 top-15 bg-white py-8 text-right">
+                <i onclick="openMenu()" class="fa-solid fa-x text-2xl font-bold hidden mr-10 cursor-pointer"></i>
+                <ul class="text-center">
+                    <a href="/"><li class="border-b-1 border-[rgba(0,0,0,0.3)] py-1">Úvodní stránka</li></a>
+                    <a href="/profil"><li class="border-b-1 border-[rgba(0,0,0,0.3)] py-1">Osobní profil</li></a>
+                    <a href="/projekty"><li class="border-b-1 border-[rgba(0,0,0,0.3)] py-1">Projekty</li></a>
+                </ul>
+            </nav>
+            <div class="md:hidden cursor-pointer text-white hover:text-[rgba(255,255,255,0.6)] " onclick="openMenu()">
+                <i class="fa-solid fa-bars text-2xl font-bold hidden"></i>
+            </div>
         </div>
     </header>
     <!--ÚVOD-->
@@ -122,5 +133,6 @@
     </footer>
     <script src="/js/projekty.js" defer></script>
     <script src="js/headerScroll.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>
