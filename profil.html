@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>ZIT - Osobní profil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+</head>
+<body>
+    <img src="/images/Ellipse.png" class="absolute -top-80 right-0 -z-1" width="700" alt="blue-gradient">
+    <header id="header" class="w-full sticky top-0 z-10 sticky:bg-[var(--tmave-seda)]">
+        <div class="flex justify-between items-center h-16 md:px-20 px-10 py-10">
+            <div class="flex items-center gap-2"> 
+                <a href="index.html" class="flex items-center justify-center gap-3">
+                    <img class="w-12" src="/images/logo.webp" alt="logo">  
+                    <h1 class="text-xl font-bold">Martin Kozar</h1>
+                </a>
+            </div>
+            <div class="h-10 flex items-center px-20">
+            <nav>
+                <ul class="flex items-center gap-16 text-base text-[rgba(255,255,255,0.7)]">
+                    <li><a href="index.html">Úvodní stránka</a></li>
+                    <li><a href="/profil.html">Osobní profil</a></li>
+                    <li><a href="/projekty.html">Projekty</a></li>
+                </ul>
+            </nav>
+        </div>      
+            <button class="bg-[var(--modra)] hover:bg-white text-black">
+                Projekt ZIT
+            </button>
+        </div>
+    </header>
+    <!--ÚVOD-->
+    <div class="md:flex flex-col items-center justify-between block h-full 2xl:h-[30vh] xl:h-[40vh] mt-8 pb-8">
+        <div>
+            <div class="flex bg-[var(--svetle-seda)] w-42 text-center rounded-4xl justify-center items-center mx-auto gap-2 px-4 py-1.5 mb-4">
+                <div class="w-2 h-2 bg-[var(--modra)] rounded-4xl"></div>
+                <p class="font-semibold color-white text-base">Martin Kozar</p>
+            </div>
+            <h2 class="text-5xl font-bold border-vlevo" id="nadpis"></h2>
+        </div>           
+        <div>
+            <button class="hover:bg-[var(--svetle-seda)] hover:text-white border-1 border-[var(--text-sedy)]">
+                <a href="#profil" class="text-base">Zobrazit více</a>
+            </button>   
+            <div id="arrowBtn" class="w-10 h-10 mx-auto cursor-pointer transition-transform duration-300">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!--OSOBNÍ PROFIL-->
+    <div id="profil" class="bg-white md:flex md:px-20 px-10 py-50 gap-20">
+        <div class="text-[var(--svetle-seda)] md:w-1/2 w-full">
+            <p>
+                Jmenuji se Martin Kozar a jsem studentem 1. ročníku VŠB-TUO.
+                Střední školu jsem vystodoval na SŠ Teleinformatiky v Ostravě-Porubě,
+                obor informační technologie.       
+            </p>
+            <br>
+            <p>
+                Webovému designu se věnuji už několik let – nejen v rámci školní výuky, 
+                ale i samostatně. Tvořím moderní webové stránky na míru, zaměřuji 
+                se na SEO optimalizaci, responzivitu, správu PPC kampaní a další související služby.
+            </p>
+            <br>
+            <p>Využívané technologie: </p>
+            <ul id="list-technologie" class="marker:text-[var(--modra)] list-disc ml-0 pl-6">
+                <li>HTML/CSS</li>
+                <li>TailwindCSS</li>
+                <li>WordPress</li>
+                <li>Figma</li>
+                <li>GIT/GitHub</li>
+                <li>PHP</li>
+                <li>Adobe Firefly</li>
+                <li>ReactJS</li>
+            </ul>
+        </div>
+        <div class="md:w-1/2 w-full">
+            <img src="images/code-profil.webp" alt="webkozar.cz" class="img-hover absolute w-1/4 top-110 left-160 hidden lg:block">
+            <img src="images/mk-profil.webp" alt="Martin Kozar - fotka" class="img-hover lg:w-3/4 w-full mx-auto">
+            <a href="https://webkozar.cz/" target="_blank">
+                <img src="images/webkozar-profil.webp" alt="kode" class="img-hover absolute w-1/4 top-230 right-20 hidden lg:block">
+            </a>
+        </div>
+    </div>
+    
+    <!--FOOTER-->
+    <div class="md:flex md:px-20 px-10 justify-between bg-[var(--tmave-seda)] py-10 border-b-1 border-b-[var(--svetle-seda)] text-center md:text-left ">
+       <div class="md:w-1/3 w-full mb-8 md:mb-0">
+            <h3 class="text-3xl font-bold mb-1 border-vlevo">Projekt</h3>
+            <p class="text-xl mb-2">Základy informačních technologií</p>
+            <img src="images/logo.webp" alt="logo" class="w-16 mx-auto md:mx-0">
+       </div>
+       <div class="md:w-1/3 w-full">
+            <h3 class="text-3xl font-bold mb-1 border-vlevo">Stránky</h3>
+            <p class="text-xl underline"><a href="">Úvodní stránka</a></p>
+            <p class="text-xl underline"><a href="">Osobní profil</a></p>
+            <p class="text-xl underline"><a href="">Projekty</a></p>
+       </div>
+    </div>
+    <footer class="py-4 text-center">
+        <p>© Copyright 2025 | Martin Kozar </p>
+    </footer>
+    <script src="/js/profil.js" defer></script>
+    <script src="js/showTechnologie.js" defer></script>
+    <script src="js/headerScroll.js"></script>
+</body>
+</html>

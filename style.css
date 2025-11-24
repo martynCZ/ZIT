@@ -51,3 +51,20 @@ button{
 #header{
     transition: 0.3s ease;
 }
+#arrowBtn {
+    
+    animation: bounce 1s infinite alternate ease-in-out;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to   { transform: translateY(10px); }
+}
+.img-hover{
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.img-hover:hover{
+    transform: scale(1.02);
+}
+
