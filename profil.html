@@ -11,30 +11,30 @@
 </head>
 <body>
     <img src="/images/Ellipse.png" class="absolute -top-80 right-0 -z-1" width="700" alt="blue-gradient">
-    <header id="header" class="w-full sticky top-0 z-10 sticky:bg-[var(--tmave-seda)]">
+    <header id="header" class="sticky top-0 z-10 sticky:bg-[var(--tmave-seda)]">
         <div class="flex justify-between items-center h-16 md:px-20 px-10 py-10">
             <div class="flex items-center gap-2"> 
-                <a href="index.html" class="flex items-center justify-center gap-3">
+                <a href="/" class="flex items-center justify-center gap-3">
                     <img class="w-12" src="/images/logo.webp" alt="logo">  
                     <h1 class="text-xl font-bold">Martin Kozar</h1>
                 </a>
             </div>
-            <div class="h-10 flex items-center px-20">
+            <div class="h-10 sm:flex items-center px-20 hidden">
             <nav>
                 <ul class="flex items-center gap-16 text-base text-[rgba(255,255,255,0.7)]">
-                    <li><a href="index.html">Úvodní stránka</a></li>
-                    <li><a href="/profil.html">Osobní profil</a></li>
-                    <li><a href="/projekty.html">Projekty</a></li>
+                    <li><a href="/">Úvodní stránka</a></li>
+                    <li><a href="/profil">Osobní profil</a></li>
+                    <li><a href="/projekty">Projekty</a></li>
                 </ul>
             </nav>
-        </div>      
-            <button class="bg-[var(--modra)] hover:bg-white text-black">
+            </div>      
+            <button class="bg-[var(--modra)] hover:bg-white text-black hidden sm:block">
                 Projekt ZIT
             </button>
         </div>
     </header>
     <!--ÚVOD-->
-    <div class="md:flex flex-col items-center justify-between block h-full 2xl:h-[30vh] xl:h-[40vh] mt-8 pb-8">
+    <div class="flex flex-col gap-4 items-center justify-between block h-full 2xl:h-[30vh] xl:h-[40vh] mt-8 pb-8">
         <div>
             <div class="flex bg-[var(--svetle-seda)] w-42 text-center rounded-4xl justify-center items-center mx-auto gap-2 px-4 py-1.5 mb-4">
                 <div class="w-2 h-2 bg-[var(--modra)] rounded-4xl"></div>
@@ -81,10 +81,10 @@
             </ul>
         </div>
         <div class="md:w-1/2 w-full">
-            <img src="images/code-profil.webp" alt="webkozar.cz" class="img-hover absolute w-1/4 top-110 left-160 hidden lg:block">
+            <img src="images/code-profil.webp" alt="webkozar.cz" class="left-240-2k img-hover absolute w-1/4 top-110 left-150 hidden lg:block">
             <img src="images/mk-profil.webp" alt="Martin Kozar - fotka" class="img-hover lg:w-3/4 w-full mx-auto">
             <a href="https://webkozar.cz/" target="_blank">
-                <img src="images/webkozar-profil.webp" alt="kode" class="img-hover absolute w-1/4 top-230 right-20 hidden lg:block">
+                <img src="images/webkozar-profil.webp" alt="kode" class="img-hover absolute w-1/4 top-230 min-[1920px]:top-250 right-0 hidden lg:block">
             </a>
         </div>
     </div>
@@ -98,9 +98,9 @@
        </div>
        <div class="md:w-1/3 w-full">
             <h3 class="text-3xl font-bold mb-1 border-vlevo">Stránky</h3>
-            <p class="text-xl underline"><a href="">Úvodní stránka</a></p>
-            <p class="text-xl underline"><a href="">Osobní profil</a></p>
-            <p class="text-xl underline"><a href="">Projekty</a></p>
+            <p class="text-xl underline"><a href="/">Úvodní stránka</a></p>
+            <p class="text-xl underline"><a href="/profil">Osobní profil</a></p>
+            <p class="text-xl underline"><a href="/projekty">Projekty</a></p>
        </div>
     </div>
     <footer class="py-4 text-center">
